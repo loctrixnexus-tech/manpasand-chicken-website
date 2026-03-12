@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Egg Products | Manpasand Chicken</title>
+  <link rel="stylesheet" href="css/eggs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <img src="images/logo.jpeg" alt="Manpasand Chicken Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Manpasand Chicken</span>
+          <span class="brand-tagline">Hamari Freshness, Aapki Happiness</span>
+        </div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+
+        <a href="order.html" class="nav-link">Order</a>
+        <a href="https://wa.me/916200311600" target="_blank" class="whatsapp-btn">
+          WhatsApp
+        </a>
+     
+
+      </nav>
+    </div>
+  </header>
+
+  <section class="eg-page">
+    <div class="eg-card">
+
+      <h1 class="eg-title">Fresh White Eggs</h1>
+      <p class="eg-note">Farm fresh · Collected daily</p>
+
+      <!-- SINGLE OPTION -->
+      <div class="eg-option-box">
+        <div class="eg-option active">
+          <h3>White Eggs</h3>
+          <p>₹6 per piece</p>
+        </div>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="eg-qty">
+        <label>Select Quantity (Pieces)</label>
+        <select id="egQty">
+          <option value="6">6 Eggs</option>
+          <option value="12">12 Eggs</option>
+          <option value="18">18 Eggs</option>
+          <option value="24">24 Eggs</option>
+          <option value="30">30 Eggs</option>
+        </select>
+      </div>
+
+      <!-- PRICE -->
+      <div class="eg-price">
+        ₹ <span id="egTotal">36</span>
+      </div>
+      <button class="fs-btn" onclick="addToCart(
+  'eggs',
+  'White Eggs',
+  document.getElementById('egQty').value + ' Eggs',
+  document.getElementById('egTotal').innerText
+)">
+        Add to Cart
+      </button>
+
+    </div>
+  </section>
+    <footer class="site-footer">
+        © 2026 Manpasand Chicken. All Rights Reserved.
+
+<p>Website developed by <strong>Loctrix Nexus</strong></p>
+</footer>
+  <script src="js/cart.js"></script>
+
+  <script src="js/eggs.js">
+
+  </script>
+  <script src="js/main.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+
+</html>

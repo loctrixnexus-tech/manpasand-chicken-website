@@ -1,0 +1,190 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.brand-name {
+  font-family: 'Playfair Display', serif;
+}
+
+
+
+/* PAGE */
+.fs-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f4f6f4, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* CARD */
+.fs-card {
+  width: 100%;
+  max-width: 620px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 42px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+  animation: fsSlideUp 0.9s ease;
+}
+
+/* TITLE */
+.fs-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #D11243;
+  margin-bottom: 6px;
+}
+
+/* NOTE */
+.fs-note {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* OPTIONS */
+.fs-options {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.fs-option {
+  width: 180px;
+  padding: 22px;
+  border-radius: 14px;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.fs-option input {
+  display: none;
+}
+
+.fs-option h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.fs-option p {
+  font-size: 14px;
+  color: #666;
+}
+
+.fs-option:hover {
+  transform: translateY(-6px);
+}
+
+.fs-option.active {
+  border-color: #D11243;
+  background: linear-gradient(180deg, #f1f9f4, #ffffff);
+  box-shadow: 0 12px 25px rgba(15, 124, 61, 0.18);
+}
+
+/* QUANTITY */
+.fs-qty {
+  margin-bottom: 28px;
+}
+
+.fs-qty label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.fs-qty select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.fs-qty select:focus {
+  border-color: #D11243;
+  outline: none;
+}
+
+/* PRICE */
+.fs-price {
+  font-size: 34px;
+  font-weight: 900;
+  color: #D11243;
+  margin: 25px 0 30px;
+  animation: fsPulse 1.6s infinite;
+}
+
+/* BUTTON */
+.fs-btn {
+  padding: 15px 46px;
+  border-radius: 50px;
+  border: none;
+  background: #D11243;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+  box-shadow: 0 10px 25px rgba(15, 124, 61, 0.35);
+}
+
+.fs-btn:hover {
+  background: #B20E38;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 124, 61, 0.45);
+}
+
+/* ANIMATIONS */
+@keyframes fsSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fsPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .fs-options {
+    flex-direction: column;
+  }
+}
+
+

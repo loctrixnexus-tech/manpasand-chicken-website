@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fish Products | Manpasand Chicken</title>
+  <link rel="stylesheet" href="css/fish.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <img src="images/logo.jpeg" alt="Manpasand Chicken Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Manpasand Chicken</span>
+          <span class="brand-tagline">Hamari Freshness, Aapki Happiness</span>
+        </div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+
+        <a href="order.html" class="nav-link">Order</a>
+        <a href="https://wa.me/916200311600" target="_blank" class="whatsapp-btn">
+          WhatsApp
+        </a>
+       
+      </nav>
+    </div>
+  </header>
+
+  <section class="fs-page">
+    <div class="fs-card">
+
+      <h1 class="fs-title">Fresh Fish</h1>
+      <p class="fs-note">Fresh & cleaned on order</p>
+
+      <!-- FISH OPTIONS -->
+      <div class="fs-options">
+        <label class="fs-option active" data-price="220">
+          <input type="radio" name="fish" checked>
+          <h3>Rohu Fish</h3>
+          <p>₹220 per KG</p>
+        </label>
+
+        <label class="fs-option" data-price="260">
+          <input type="radio" name="fish">
+          <h3>Katla Fish</h3>
+          <p>₹260 per KG</p>
+        </label>
+
+        <label class="fs-option" data-price="420">
+          <input type="radio" name="fish">
+          <h3>Prawns</h3>
+          <p>₹420 per KG</p>
+        </label>
+      </div>
+
+      <!-- QUANTITY -->
+      <div class="fs-qty">
+        <label>Select Quantity (KG)</label>
+        <select id="fsQty">
+          <option value="0.5">0.5 KG</option>
+          <option value="1">1 KG</option>
+          <option value="1.5">1.5 KG</option>
+          <option value="2">2 KG</option>
+          <option value="2.5">2.5 KG</option>
+          <option value="3">3 KG</option>
+        </select>
+      </div>
+
+      <!-- PRICE -->
+      <div class="fs-price">
+        ₹ <span id="fsTotal">110</span>
+      </div>
+      <button class="fs-btn" onclick="addToCart(
+  'fish',
+  selectedFish,
+  document.getElementById('fsQty').value + ' KG',
+  document.getElementById('fsTotal').innerText
+)">
+        Add to Cart
+      </button>
+
+
+
+
+
+
+
+
+    </div>
+  </section>
+
+ <footer class="site-footer">
+        © 2026 Manpasand Chicken. All Rights Reserved.
+
+<p>Website developed by <strong>Loctrix Nexus</strong></p>
+</footer>
+  <script src="js/cart.js"></script>
+
+  <script src="js/fish.js"></script>
+  <script src="js/main.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

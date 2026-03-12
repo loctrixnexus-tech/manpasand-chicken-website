@@ -1,0 +1,314 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.brand-name {
+  font-family: 'Playfair Display', serif;
+}
+
+
+
+/* PAGE */
+.eg-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #f4fbf7, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+/* CARD */
+.eg-card {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 48px 42px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+  animation: egFadeIn 1s ease;
+}
+
+/* TITLE */
+.eg-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #D11243;
+  margin-bottom: 6px;
+}
+
+/* NOTE */
+.eg-note {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 36px;
+}
+
+/* OPTION BOX */
+.eg-option-box {
+  margin-bottom: 34px;
+}
+
+.eg-option {
+  padding: 26px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #f1f9f4, #ffffff);
+  border: 2px solid #D11243;
+  box-shadow: 0 14px 35px rgba(15, 124, 61, 0.25);
+  animation: egPulseCard 2s infinite;
+}
+
+.eg-option h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.eg-option p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* QUANTITY */
+.eg-qty {
+  margin-bottom: 28px;
+}
+
+.eg-qty label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.eg-qty select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.eg-qty select:focus {
+  border-color: #D11243;
+  outline: none;
+}
+
+/* PRICE */
+.eg-price {
+  font-size: 36px;
+  font-weight: 900;
+  color: #D11243;
+  margin: 26px 0 32px;
+  animation: egPulsePrice 1.6s infinite;
+}
+
+/* BUTTON */
+/* ADD TO CART BUTTON */
+.fs-btn {
+  width: 50%;
+  padding: 15px 46px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(90deg, #D11243, #2ea86b);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(15, 124, 61, 0.35);
+  transition: all 0.25s ease;
+}
+
+.fs-btn:hover {
+  background: linear-gradient(90deg, #B20E38, #24955f);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(15, 124, 61, 0.45);
+}
+
+.fs-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(15, 124, 61, 0.3);
+}
+
+
+/* ANIMATIONS */
+@keyframes egFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes egPulsePrice {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes egPulseCard {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+  .eg-card {
+    padding: 38px 28px;
+  }
+}
+
+
+
+
+/* =========================
+   NAVBAR (COMMON FOR ALL PAGES)
+========================= */
+
+/* Header base */
+.header {
+  background: #D11243;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: navbarSlideDown 0.8s ease;
+}
+
+/* Header layout */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Logo */
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  animation: logoGlow 3s infinite;
+}
+
+/* Navigation links */
+.nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  position: relative;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Underline hover animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+  background: #25d366;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+  animation: whatsappPulse 2.6s infinite;
+}
+
+/* =========================
+   NAVBAR ANIMATIONS
+========================= */
+
+/* Navbar slide down */
+@keyframes navbarSlideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Logo glow */
+@keyframes logoGlow {
+  0% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+
+  50% {
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.9);
+  }
+
+  100% {
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* WhatsApp pulse */
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+}

@@ -1,0 +1,1121 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #1c1c1c;
+    background: #fff;
+    
+    font-family: Arial, sans-serif;
+
+}
+
+
+.product-card.home-product:hover{
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+}
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background: #D11243;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.header .container{
+    max-width:100%;
+    margin:0;
+    padding-left:15px;
+    padding-right:30px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.brand-name {
+    font-family: 'Playfair Display', serif;
+}
+
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;   /* ✅ ADD THIS */
+    
+     padding: 22px 20px;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+
+
+.nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+     margin-left: 0;
+}
+
+.whatsapp-btn {
+    background: #25d366;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+/* =========================
+   NAVBAR SPACING IMPROVEMENT
+========================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* 👈 controls space between items */
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    position: relative;
+    height: 85vh;
+    background: url("../images/bg.jpeg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    filter: contrast(1.05) saturate(1.05);
+    
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeUp 1.2s ease;
+}
+
+/* HERO HEADING */
+.hero h2 {
+    font-size: 52px;
+    font-weight: 900;
+    color: #D11243;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-shadow:
+        0 2px 6px rgba(255,255,255,0.6),
+        0 4px 10px rgba(0,0,0,0.15);
+    animation: heroFloat 4s ease-in-out infinite;
+}
+
+/* HERO ICON */
+.icon-wrap {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.icon-wrap img {
+    width: 60px;
+    height: 60px;
+    filter: brightness(0) saturate(100%);
+    animation: iconPulse 3.2s ease-in-out infinite;
+}
+
+/* HERO SUBTITLE */
+.hero-subtitle {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1f1f1f;
+    max-width: 650px;
+    margin: 0 auto 18px;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    animation: heroFloatSub 5s ease-in-out infinite;
+}
+
+.hero-subtitle::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #D11243;
+    margin: 14px auto 0;
+    border-radius: 2px;
+}
+
+/* TRUST TEXT */
+.hero-trust {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2a2a2a;
+    margin-top: 12px;
+    letter-spacing: 0.4px;
+}
+
+/* =========================
+   ORDER NOW BUTTON
+========================= */
+.order-btn {
+    position: relative;
+    display: inline-block;
+    padding: 14px 42px;
+    background: #D11243;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+
+    animation:
+        glowPulse 0.9s infinite,
+        btnBreath 2.6s ease-in-out infinite;
+
+    transition:
+        background-color 0.08s ease,
+        transform 0.08s ease,
+        box-shadow 0.08s ease,
+        opacity 0.08s ease;
+}
+
+/* Moving shine */
+.order-btn::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.35) 0%,
+        transparent 60%
+    );
+    opacity: 0.6;
+    animation: btnShine 3.5s linear infinite;
+    pointer-events: none;
+}
+
+.order-btn:hover {
+    background-color: #B20E38;
+    opacity: 0.92;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15,124,61,0.45);
+}
+
+.order-btn:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.light-bg {
+    background: #f6f6f6;
+}
+
+
+
+/* =========================
+   GRID
+========================= */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+.btn,
+.c-btn {
+    background: #D11243;
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.15s;
+    text-decoration: none;
+}
+
+.btn.big {
+    padding: 14px 35px;
+}
+
+.btn:hover,
+.c-btn:hover {
+    background: #B20E38;
+    transform: translateY(-2px);
+}
+
+.btn:active,
+.c-btn:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes glowPulse {
+    0%   { box-shadow: 0 0 0 rgba(15,124,61,0.4); }
+    50%  { box-shadow: 0 0 18px rgba(15,124,61,0.6); }
+    100% { box-shadow: 0 0 0 rgba(15,124,61,0.4); }
+}
+
+@keyframes btnBreath {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
+
+@keyframes btnShine {
+    0%   { transform: translate(-30%, -30%) rotate(0deg); }
+    50%  { transform: translate(30%, 30%) rotate(180deg); }
+    100% { transform: translate(-30%, -30%) rotate(360deg); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes heroFloatSub {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}
+
+/* FIX: Product card layout spacing */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 210px;
+}
+
+.product-card h3 {
+    margin-bottom: 6px;
+}
+
+.product-card p {
+    margin-bottom: 14px;
+}
+
+.product-card .btn {
+    margin-top: auto;
+    align-self: center;
+}
+
+
+
+/* =========================
+   CONTACT SECTION (FINAL CLEAN)
+========================= */
+
+.contact-section {
+    padding-bottom: 80px;
+}
+
+.contact-card {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 42px 30px;
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+    text-align: center;
+    animation: fadeUp 1s ease;
+}
+
+/* Title inside card */
+.contact-name {
+    font-size: 22px;
+    font-weight: 900;
+    color: #D11243;
+    margin-bottom: 20px;
+}
+
+/* Rows */
+.contact-row {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #1c1c1c;
+}
+
+.contact-row span {
+    font-weight: 700;
+    color: #D11243;
+}
+
+/* WhatsApp button spacing */
+.contact-card .btn.big {
+    margin: 24px auto 12px;
+    display: inline-block;
+}
+
+/* Small page link */
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #D11243;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+
+
+/* Fallback safety spacing */
+section p {
+    line-height: 3;
+}       
+
+
+
+/* Navbar slide-in animation */
+.header {
+    animation: navbarSlideDown 0.8s ease;
+}
+
+@keyframes navbarSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Logo enhancement */
+/* Logo enhancement - Premium Glow */
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+    animation: logoGlow 3s infinite;
+}
+
+@keyframes logoGlow {
+    0% {
+        text-shadow: 0 0 0 rgba(255,255,255,0.4);
+    }
+    50% {
+        text-shadow: 0 0 14px rgba(255,255,255,0.9);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(255,255,255,0.4);
+    }
+}
+
+/* =========================
+   MOBILE LOGO RESPONSIVE
+========================= */
+
+
+@media (max-width: 600px) {
+    .brand-tagline {
+        display: none;
+    }
+
+    .brand-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.brand-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    
+}     
+/* Navbar links styling */
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    position: relative;
+    opacity: 0.9;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+/* Underline hover animation */
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* WhatsApp button pulse */
+.whatsapp-btn {
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.45);
+    animation: whatsappPulse 2.6s infinite;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 rgba(37,211,102,0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(37,211,102,0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(37,211,102,0.4);
+    }
+}
+
+
+
+
+/* =========================
+   HOME PRODUCT CARDS UPGRADE
+========================= */
+
+.home-product {
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.home-product h3 {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #D11243;
+}
+
+.home-product p {
+    margin: 8px 0 18px;
+    font-weight: 600;
+}
+
+/* Image on top */
+.product-img {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.home-product:hover img {
+    transform: scale(1.08);
+}
+
+/* Badge */
+.tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #D11243;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+.tag.blue { background: #0f5fc7; }
+.tag.yellow { background: #f4b400; color: #000; }
+
+/* Keep button aligned */
+.home-product .btn {
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   BRAND LOGO + TAGLINE
+========================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.6px;
+
+    text-shadow: 0 1px 3px rgba(0,0,0,0.35);
+}
+
+
+.brand-name {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.brand-name::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: rgba(255,255,255,0.7);
+    margin-top: 3px;
+    border-radius: 2px;
+}
+
+
+.brand-tagline {
+    font-size: 14px;                 /* bigger */
+    font-weight: 800;               /* bold */
+    color: #ffffff;                 /* full white */
+    margin-top: 4px;
+    letter-spacing: 0.6px;
+    text-transform: capitalize;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35); /* visibility boost */
+}
+
+
+
+/* =========================
+   HOMEPAGE SECTION HEADINGS
+========================= */
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #D11243;              /* theme color */
+    margin-bottom: 55px;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+/* underline style (like your screenshot) */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #D11243;
+    margin: 14px auto 0;
+    border-radius: 4px;
+}
+
+/* =========================
+   WHY CHOOSE US –
+========================= */
+
+/* Section spacing balance */
+.section.why-choose {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Cards layout polish */
+.section.why-choose .info-card {
+    padding: 40px 28px;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fafafa 100%
+    );
+    text-align: center;
+}
+
+/* Icon styling */
+.section.why-choose .icon-wrap {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(15,124,61,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section.why-choose .icon-wrap img {
+    width: 48px;
+    height: 48px;
+    filter: brightness(0) saturate(100%);
+}
+
+/* Card heading */
+.section.why-choose h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #D11243;
+    margin-bottom: 10px;
+    letter-spacing: 0.4px;
+}
+
+/* Card text */
+.section.why-choose p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    line-height: 1.6;
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+/* Hover effect – premium */
+.section.why-choose .info-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 45px rgba(15,124,61,0.18);
+}
+
+/* Mobile balance */
+@media (max-width: 900px) {
+    .section.why-choose .info-card {
+        padding: 34px 22px;
+    }
+
+    .section.why-choose h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   MOBILE NAVBAR (HAMBURGER)
+========================= */
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+        transition: 0.25s;
+        cursor: pointer;
+       
+       /* 👈 push it little inside */
+
+
+    }
+
+    .menu-toggle:hover{
+        transform: scale(1.1);
+        color: #ffe6e6;
+    }
+
+    .nav {
+        position: absolute;
+        top:100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #D11243;
+       margin-top: 5px;
+        padding: 15px;
+        display: none; /* hidden by default */
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .whatsapp-btn {
+        display: inline-block;
+        width: auto;
+        padding: 8px 16px;
+        border-radius: 6px;
+      
+    }
+}
+
+
+@media (max-width: 900px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 600px) {
+
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+@media (max-width: 600px) {
+
+    .btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+    }
+
+    .order-btn {
+        width: auto;          /* override full width */
+        padding: 10px 24px;
+        font-size: 15px;
+    }
+}
+
+
+/* =========================
+   HOW TO ORDER PREMIUM
+========================= */
+
+.how-order {
+    background: linear-gradient(to bottom, #ffffff, #f7fbf9);
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.how-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.35s ease;
+    position: relative;
+}
+
+.how-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(15,124,61,0.18);
+}
+
+/* Step circle */
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background: #D11243;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 25px rgba(15,124,61,0.4);
+}
+
+.how-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #D11243;
+    margin-bottom: 10px;
+}
+
+.how-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .how-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes whatsappGlow {
+    from {
+        text-shadow:
+            0 0 5px #ffffff,
+            0 0 10px #25d366,
+            0 0 20px #25d366;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ffffff,
+            0 0 20px #25d366,
+            0 0 40px #25d366,
+            0 0 60px #25d366;
+    }
+}
+
+/* =========================
+   MOBILE NAVBAR FIX ONLY
+========================= */
+
+/* =========================
+   MOBILE NAVBAR CLEAN FIX
+========================= */
+
+@media (max-width:768px){
+
+/* Reduce navbar height */
+.header-flex{
+padding:10px 14px;
+align-items:center;
+flex-wrap:nowrap;
+}
+
+/* Keep logo + text aligned */
+.brand{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+/* Logo medium size */
+.brand-logo{
+height:36px;
+width:auto;
+}
+
+/* Shop name */
+.brand-name{
+font-size:16px;
+font-weight:800;
+line-height:1.1;
+}
+
+/* Tagline below */
+.brand-tagline{
+font-size:10px;
+line-height:1.2;
+max-width:120px;
+}
+
+/* Toggle icon */
+.menu-toggle{
+font-size:24px;
+cursor:pointer;
+transition:0.3s;
+}
+
+/* Hover effect */
+.menu-toggle:hover{
+transform:scale(1.15);
+color:#ffdede;
+}
+
+/* Menu dropdown width */
+.nav{
+position:absolute;
+top:100%;
+right:10px;
+width:220px;
+background:#D11243;
+border-radius:8px;
+padding:15px;
+display:none;
+flex-direction:column;
+gap:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.whatsapp-btn{
+    display: none;
+}
+/* Toggle active */
+.nav.active{
+display:flex;
+}
+
+/* Menu links */
+.nav a{
+padding:6px 0;
+font-size:16px;
+
+}
+
+/* WhatsApp button block not full width */
+
+
+#google_translate_element{
+display:none;
+}
+
+.language-switch{
+color:#fff;
+font-weight:600;
+cursor:pointer;
+margin-left:12px;
+}
+
+.language-switch span:hover{
+text-decoration:underline;
+}
+
+}
+
+.site-footer  {
+text-align:center;
+padding:20px;
+background:#111;
+color:#ccc;
+font-size:14px;
+margin-top:40px;
+cursor:pointer;
+}
+
+.site-footer strong{
+color:#ff8fb3;
+}
+
+/* 
+.language-switch span{
+cursor:pointer;
+transition:0.2s;
+}
+
+.language-switch span:hover{
+text-decoration: underline;
+color:#fff;
+}
+
+/* Hide Google translate top bar only */
+.goog-te-banner-frame.skiptranslate {
+display: none !important;
+}
+
+/* Prevent page shifting */
+body {
+top: 0px !important;
+} */
+
+.goog-te-banner-frame.skiptranslate{display:none!important;}
+body{top:0!important;}
+.goog-logo-link{display:none!important;}
+.goog-te-gadget span{display:none!important;}
+.goog-te-combo{display:none!important;}

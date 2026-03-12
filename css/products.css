@@ -1,0 +1,254 @@
+.product-card {
+  background: linear-gradient(180deg, #ffffff, #f7fdf9);
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.brand-name {
+  font-family: 'Playfair Display', serif;
+}
+
+
+.product-card:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* IMAGE */
+.product-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* BADGE */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #D11243;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.badge.blue {
+  background: #0f5fc7;
+}
+
+.badge.yellow {
+  background: #f4b400;
+  color: #000;
+}
+
+/* FORM */
+.field {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+select:focus,
+input:focus {
+  border-color: #D11243;
+  box-shadow: 0 0 0 2px rgba(15, 124, 61, 0.15);
+}
+
+/* PRICE */
+.price {
+  font-size: 24px;
+  font-weight: 900;
+  color: #D11243;
+  margin: 14px 0;
+}
+
+/* BUTTON */
+.add-btn {
+  background: linear-gradient(135deg, #D11243, #14a85b);
+  color: #fff;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(15, 124, 61, 0.4);
+}
+
+
+/* ===== PRODUCT SECTION WIDTH FIX ===== */
+.products-page {
+  width: 80%;
+  /* change to 70% if you want tighter */
+  margin: 0 auto;
+  /* center the section */
+  padding: 40px 0;
+  padding-top: 15px !important;
+}
+
+/* ===== GRID FIX ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal cards */
+  gap: 30px;
+  /* space between cards */
+  align-items: stretch;
+  /* equal height */
+}
+
+/* ===== CARD SIZE CONSISTENCY ===== */
+.product-card {
+  height: 100%;
+  /* equal height */
+  max-width: 100%;
+  /* prevent stretching */
+}
+
+/* ===== IMAGE CONSISTENT SIZE ===== */
+.product-image {
+  height: 190px;
+  /* same image height for all */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+  .products-page {
+    width: 90%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products-page {
+    width: 95%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-title {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 900;
+  color: #D11243;
+  /* theme color */
+  margin-bottom: 35px;
+  position: relative;
+  animation: fadeSlide 1s ease forwards;
+  margin-top: 10px !important;
+}
+
+/* underline accent */
+.page-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 5px;
+  background: #D11243;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.product-card h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #D11243;
+  margin-bottom: 6px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-grid {
+  align-items: stretch;
+  /* force equal height */
+}
+
+/* push button to bottom */
+.add-btn {
+  margin-top: auto;
+}
+
+.desc {
+  min-height: 40px;
+  /* keeps spacing consistent */
+}
+
+

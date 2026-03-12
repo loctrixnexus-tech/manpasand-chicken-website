@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Confirm Order | Manpasand Chicken</title>
+  <link rel="stylesheet" href="css/order.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <img src="images/logo.jpeg" alt="Manpasand Chicken Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Manpasand Chicken</span>
+          <span class="brand-tagline">Hamari Freshness, Aapki Happiness</span>
+        </div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+
+        <a href="order.html" class="nav-link">Order</a>
+        <a href="https://wa.me/916200311600" target="_blank" class="whatsapp-btn">
+          WhatsApp
+        </a>
+   
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- FLASH MESSAGE -->
+  <div id="flashMessage" class="flash-message"></div>
+
+
+
+  <!-- PAGE -->
+  <section class="order-page">
+    <div class="order-wrapper">
+
+      <h1 class="main-title">Confirm Your Order</h1>
+
+      <!-- CUSTOMER DETAILS -->
+      <div class="order-card fade-up">
+        <h2 class="section-titlee">Customer Details</h2>
+
+        <input type="text" id="customerName" placeholder="Your Name *">
+        <input type="text" id="customerArea" placeholder="Area / Landmark *">
+
+        <p class="error" id="errorMsg"></p>
+      </div>
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-card fade-up delay-1">
+        <h2 class="section-titlee">Order Summary</h2>
+
+        <!-- THIS WILL HOLD ITEMS -->
+        <div class="summary-text" id="orderItems">
+          Items will appear here from Products page
+        </div>
+
+        <div class="total">
+          Total Amount: ₹<span id="totalAmount">0</span>
+        </div>
+      </div>
+
+
+      <!-- DELIVERY OPTION -->
+      <div class="form-card delivery-card">
+        <h2 class="section-titlee">Choose Delivery Option</h2>
+
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="delivery" value="Pickup from Shop" checked>
+            <span>Pickup from Shop</span>
+          </label>
+
+          <label class="radio-option">
+          <input type="radio" name="delivery" value="Home Delivery" checked>
+            <span>Home Delivery</span>
+          </label>
+        </div>
+
+        <p class="delivery-note">
+          ⚠ Delivery charges apply for distance above 3 km
+        </p>
+      </div>
+
+      <!-- TIME SLOT -->
+      <div class="order-card fade-up delay-3">
+        <h2 class="section-titlee">Preferred Time Slot</h2>
+
+        <select id="timeSlot">
+          <option>8:00AM – 1:00 PM</option>
+          <option>3:00 PM – 7:00 PM</option>
+          <option>Night Order (Delivered Next Morning)</option>
+        </select>
+
+        <small class="note">🌙 Night orders are pre-orders & delivered next morning</small>
+      </div>
+
+
+      <!-- FEEDBACK SECTION -->
+      <div id="feedbackSection" class="order-card fade-up delay-2" style="margin-top:40px">
+
+
+        <h2 class="section-titlee">Customer Feedback </h2>
+        <p id="feedbackLine" style="font-weight:600; color:#D11243; margin-bottom:12px;">
+          Your feedback is important to us 💚
+        </p>
+
+
+        <select id="fbRating" required style="width:100%;padding:12px;border-radius:8px">
+          <option value="">Rate Your Experience</option>
+          <option value="⭐">⭐</option>
+          <option value="⭐⭐">⭐⭐</option>
+          <option value="⭐⭐⭐">⭐⭐⭐</option>
+          <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+          <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+        </select>
+
+        <textarea id="fbMessage" rows="4" placeholder="Write your feedback here..."
+          style="width:95%;margin-top:14px;padding:14px;border-radius:10px"></textarea>
+
+
+        <button onclick="submitFeedback()" class="feedback-btn" style="margin-top:15px;">
+          Submit Feedback
+        </button>
+
+
+      </div>
+
+
+
+
+      <!-- CONFIRM BUTTON -->
+      <div class="confirm-wrap fade-up delay-4">
+        <button class="confirm-btn" onclick="confirmOrder()">
+          Confirm Order on WhatsApp
+        </button>
+
+
+
+
+
+        <p class="trust-line">
+          <span> ✔ Fresh cut after order </span> &nbsp; <span>  ✔ Hygienic handling </span> &nbsp;<span>✔ Trusted local shop</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+ <footer class="site-footer">
+        © 2026 Manpasand Chicken. All Rights Reserved.
+
+<p>Website developed by <strong>Loctrix Nexus</strong></p>
+</footer>
+
+  <script src="js/order.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

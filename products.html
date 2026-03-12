@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/products.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title> Our Products</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header-flex">
+      <div class="brand">
+        <img src="images/logo.jpeg" alt="Manpasand Chicken Logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Manpasand Chicken</span>
+          <span class="brand-tagline">Hamari Freshness, Aapki Happiness</span>
+        </div>
+      </div>
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+
+        <a href="order.html" class="nav-link">Order</a>
+        <a href="https://wa.me/919113354669" target="_blank" class="whatsapp-btn">
+          WhatsApp
+        </a>
+       
+
+      </nav>
+    </div>
+  </header>
+
+  <section class="products-page">
+    <h2 class="page-title">Our Products</h2>
+
+    <div class="product-grid">
+
+      <!-- CHICKEN -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/chicken.jpg" alt="Fresh Chicken">
+          <span class="badge">Fresh</span>
+        </div>
+
+        <h3>Poultry Chicken</h3>
+        <p class="desc">Fresh hygienic chicken, cut only after order.</p>
+
+        <div class="field">
+          <label>Type</label>
+          <select id="chickenType">
+            <option value="150">Skin On</option>
+            <option value="180">Skinless</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Quantity (kg)</label>
+          <input type="number" id="chickenQty" min="0.5" step="0.5" value="1">
+          <small>Price calculated per kg</small>
+        </div>
+
+        <div class="price">₹<span id="chickenPrice">150</span></div>
+        <button class="add-btn" onclick="addChickenFromProducts()">Add to Cart</button>
+      </div>
+
+      <!-- FISH -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/fish.jpg" alt="Fresh Fish">
+          <span class="badge blue">Daily Catch</span>
+        </div>
+
+        <h3>Fresh Fish</h3>
+        <p class="desc">Fresh local fish, cleaned & cut as per order.</p>
+
+        <div class="field">
+          <label>Fish Type</label>
+          <select id="fishType">
+            <option value="220">Rohu Fish</option>
+            <option value="260">Katla Fish</option>
+            <option value="420">Jasar</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Quantity (kg)</label>
+          <input type="number" id="fishQty" min="0.5" step="0.5" value="0.5">
+          <small>Price calculated per kg</small>
+        </div>
+
+        <div class="price">₹<span id="fishPrice">110</span></div>
+        <button class="add-btn" onclick="addFishFromProducts()">Add to Cart</button>
+      </div>
+
+      <!-- EGGS -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="images/egg.jpg" alt="Farm Eggs">
+          <span class="badge yellow">Farm Fresh</span>
+        </div>
+
+        <h3>Eggs</h3>
+        <p class="desc">Farm fresh white eggs, hygienically stored.</p>
+
+        <div class="field">
+          <label>Select Quantity</label>
+          <select id="eggQty">
+            <option value="6">6 Eggs</option>
+            <option value="12">12 Eggs</option>
+            <option value="18">18 Eggs</option>
+            <option value="24">24 Eggs</option>
+            <option value="30">30 Eggs</option>
+            <option value="60">60 Eggs</option>
+          </select>
+          <small>₹6 per egg</small>
+        </div>
+
+        <div class="price">₹<span id="eggPrice">36</span></div>
+        <button class="add-btn" onclick="addEggsFromProducts()">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+   <footer class="site-footer">
+        © 2026 Manpasand Chicken. All Rights Reserved.
+
+<p>Website developed by <strong>Loctrix Nexus</strong></p>
+</footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>
