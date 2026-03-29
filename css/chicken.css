@@ -41,10 +41,12 @@ h6,
   border-radius: 18px;
   padding: 42px;
   text-align: center;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 11px 106px rgb(194 29 29 / 22%);
   animation: fsSlideUp 0.9s ease;
 }
-
+@media(max-width:768px){
+  .fs-card {padding:18px;}
+}
 /* TITLE */
 .fs-title {
   font-size: 36px;
@@ -88,7 +90,7 @@ h6,
 }
 
 .fs-option p {
-  font-size: 14px;
+  font-size: 17px;
   color: #666;
 }
 

@@ -42,7 +42,7 @@ h6,
   border-radius: 22px;
   padding: 48px 42px;
   text-align: center;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 106px rgb(194 29 29 / 22%);
   animation: egFadeIn 1s ease;
 }
 
@@ -81,7 +81,7 @@ h6,
 }
 
 .eg-option p {
-  font-size: 15px;
+  font-size: 17px;
   color: #555;
 }
 
@@ -188,7 +188,7 @@ h6,
 /* MOBILE */
 @media (max-width: 520px) {
   .eg-card {
-    padding: 38px 28px;
+    padding: 2px 34px;
   }
 }
 

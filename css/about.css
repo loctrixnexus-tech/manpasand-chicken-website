@@ -1,143 +1,328 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.section-title,
-.brand-name {
-  font-family: 'Playfair Display', serif;
-}
-
-
-/* HERO */
+/* =========================
+   ABOUT HERO (PREMIUM)
+========================= */
 .about-hero {
-  text-align: center;
-  padding: 70px 20px 40px;
-  background: linear-gradient(180deg, #f1f9f4, #ffffff);
+    position: relative;
+    height: 330px;
+    background: url("../images/chicken3.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    overflow: hidden;
 }
 
+/* dark overlay */
+.about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.70));
+}
+
+/* content */
 .about-hero h1 {
-  font-size: 40px;
-  color: #D11243;
+    position: relative;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    animation: fadeUp 1s ease;
 }
 
 .about-hero p {
-  margin-top: 10px;
-  color: #555;
-  font-size: 16px;
+    position: relative;
+    margin-top: -20px;
+    font-size: 22px;
+    opacity: 0.9;
 }
 
-/* CONTENT */
+/* =========================
+   CONTENT SECTION
+========================= */
 .about-content {
-  max-width: 900px;
-  margin: auto;
-  padding: 40px 20px 60px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
+/* =========================
+   CARD (LUXURY STYLE)
+========================= */
 .about-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  margin-bottom: 30px;
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+
+    overflow: hidden;
 }
 
+/* background image glow */
+.about-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    filter: blur(6px);
+}
+
+/* assign different images */
+.about-card:nth-child(1)::before {
+    background-image: url("../images/chicken.jpg");
+}
+.about-card:nth-child(2)::before {
+    background-image: url("../images/bg.jpeg");
+}
+.about-card:nth-child(3)::before {
+    background-image: url("../images/fish.jpg");
+}
+.about-card:nth-child(4)::before {
+    background-image: url("../images/egg.jpg");
+}
+.about-card:nth-child(5)::before {
+    background-image: url("../images/chicken.jpg");
+}
+
+/* keep content above */
+.about-card * {
+    position: relative;
+    z-index: 2;
+}
+
+/* hover effect */
+.about-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   TEXT
+========================= */
 .about-card h2 {
-  color: #D11243;
-  margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: #990000;
+    margin-bottom: 10px;
 }
 
-.about-card p {
-  color: #555;
-  line-height: 1.7;
+.about-card p,
+.about-card li {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.5;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
 }
 
 .about-card ul {
-  list-style: none;
-  /* remove default bullets */
-  padding-left: 0;
-  margin-top: 20px;
+    padding-left: 18px;
 }
 
-.about-card ul li {
-  position: relative;
-  padding-left: 32px;
-  margin-bottom: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1c1c1c;
-}
-
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #f1f9f4;
-  color: #555;
-}
-
-/* ANIMATIONS */
+/* =========================
+   ANIMATIONS
+========================= */
 .fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
 }
 
-.delay-1 {
-  animation-delay: 0.2s;
-}
-
-.delay-2 {
-  animation-delay: 0.4s;
-}
-
-.delay-3 {
-  animation-delay: 0.6s;
-}
-
-.delay-4 {
-  animation-delay: 0.8s;
-}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
 
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* MOBILE */
-@media(max-width: 600px) {
-  .about-hero h1 {
-    font-size: 30px;
-  }
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-hero {
+        height: 240px;
+    }
+
+    .about-hero h1 {
+        font-size: 28px;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+
+    .about-hero p {
+    position: relative;
+    margin-top: 8px;
+    font-size: 22px;
+    opacity: 0.9;
+}
 }
 
-.about-card ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 3px;
-  width: 20px;
-  height: 20px;
-  background: #D11243;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* =========================
+   GRID (SAFE + CLEAN)
+========================= */
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
+
+/* =========================
+   CARD DESIGN (PREMIUM)
+========================= */
+.about-card {
+    position: relative;
+    padding: 26px 22px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+
+    min-height: 180px;
+
+    /* 👇 IMPORTANT: NO animation here */
+}
+
+/* hover effect */
+.about-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   TEXT STYLE (LUXURY)
+========================= */
+.about-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 900;
+
+    color: #990000;
+    margin-bottom: 8px;
+}
+
+/* underline */
+.about-card h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #D11243;
+    margin-top: 6px;
+    border-radius: 3px;
+}
+
+/* text */
+.about-card p,
+.about-card li {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* list */
+.about-card ul {
+    padding-left: 18px;
+}
+
+/* =========================
+   SAFE ANIMATION (FIXED)
+========================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUpSafe 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+@keyframes fadeUpSafe {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   SUBTLE FLOAT (SAFE)
+========================= */
+.about-card.float {
+    animation: floatSoft 5s ease-in-out infinite;
+}
+
+@keyframes floatSoft {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* =========================
+   LAST CARD FIX
+========================= */
+.about-card:last-child {
+    grid-column: span 2;
+    text-align: center;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card:last-child {
+        grid-column: span 1;
+    }
+
+    .about-card h2 {
+        font-size: 20px;
+    }
+
+    .about-card p,
+    .about-card li {
+        font-size: 17px;
+    }
+}
+
+
+
+
